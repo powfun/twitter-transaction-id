@@ -1,0 +1,51 @@
+{
+  "name": "twitter-transaction-id",
+  "version": "1.0.0",
+  "description": "Twitter/X client transaction ID generator for API requests",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "example": "tsx src/example.ts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "twitter",
+    "x",
+    "api",
+    "transaction-id",
+    "cloudflare-workers"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "esbuild": "^0.25.4",
+    "tsup": "^8.4.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "linkedom": "^0.18.10"
+  }
+}
